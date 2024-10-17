@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseMiddleware<IpRestrictionMiddleware>();
 app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<RateLimitingMiddleware>();
+app.UseMiddleware<JsonRequestResponseLoggingMiddleware>();
 
 app.UseAuthorization();
 
