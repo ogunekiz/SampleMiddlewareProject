@@ -20,6 +20,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<IpRestrictionMiddleware>();
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseAuthorization();
 
